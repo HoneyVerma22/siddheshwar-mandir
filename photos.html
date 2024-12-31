@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>मंदिर और उसके परिवेश की छवियां</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+    header {
+      background-color: #8B0000;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+      gap: 20px;
+    }
+    .gallery-item {
+      width: 300px;
+      border: 2px solid #8B0000;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+    .gallery-item:hover {
+      transform: scale(1.05);
+    }
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .gallery-item .description {
+      padding: 10px;
+      text-align: center;
+      background-color: #fff;
+    }
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: #8B0000;
+      color: white;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>मंदिर और परिवेश की छवियां</h1>
+  </header>
+  <div class="gallery">
+    <div class="gallery-item">
+      <img src="assets/img/siddheshwar mandir.jpeg" alt="मंदिर का मुख्य दृश्य">
+      <div class="description">मंदिर का मुख्य दृश्य</div>
+    </div>
+    <div class="gallery-item">
+      <img src="assets/img/daylight.jpeg" alt="बलसमुंद तालाब का दृश्य">
+      <div class="description">बलसमुंद तालाब का दृश्य</div>
+    </div>
+    <div class="gallery-item">
+      <img src="assets/img/silpkala.jpeg" alt="मंदिर की वास्तुकला">
+      <div class="description">मंदिर की अद्भुत वास्तुकला</div>
+    </div>
+    <div class="gallery-item">
+      <img src="assets/img/parisar.jpeg" alt="मंदिर परिसर">
+      <div class="description">मंदिर परिसर की सुंदरता</div>
+    </div>
+    <div class="gallery-item">
+      <img src="assets/img/evening.jpeg" alt="सूर्यास्त के समय मंदिर">
+      <div class="description">सूर्यास्त के समय मंदिर का दृश्य</div>
+    </div>
+  </div>
+  <footer>
+    © 2024 हनी वर्मा | सभी अधिकार सुरक्षित
+  </footer>
+</body>
+</html>
