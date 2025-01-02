@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Siddheshwar Mandir Palari</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      user-select: none; /* Disable text selection */
+      -webkit-user-select: none;
+      -ms-user-select: none;
+    }
+    header {
+      background-color: #8B0000;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+      gap: 20px;
+    }
+    .gallery-item {
+      width: 300px;
+      border: 2px solid #8B0000;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+      cursor: pointer;
+    }
+    .gallery-item:hover {
+      transform: scale(1.05);
+    }
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: #8B0000;
+      color: white;
+      margin-top: 20px;
+    }
+    /* Lightbox styles */
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+    .lightbox img {
+      max-width: 90%;
+      max-height: 80%;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      border: 2px solid white;
+    }
+    .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: white;
+      color: #8B0000;
+      border: none;
+      font-size: 20px;
+      font-weight: bold;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .close-btn:hover {
+      background: #ddd;
+    }
+    .back-link {
+      display: block;
+      margin-top: 20px;
+      font-weight: bold;
+      text-align: center;
+      color: #8B0000;
+      text-decoration: none;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+    }
+    /* Transparent overlay to deter screenshots */
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none; /* Allows interaction with underlying elements */
+      background: rgba(255, 255, 255, 0.01); /* Nearly invisible */
+      z-index: 9999;
+    }
+    /* Disable text highlighting */
+    ::selection {
+      background: transparent; /* Prevent text highlighting */
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>मंदिर परिसर की सुंदरता</h1>
+  </header>
+  <div class="gallery">
+    <div class="gallery-item" onclick="enlargeImage('vastukala/1.jpg')">
+      <img src="vastukala/1.jpg" alt="मंदिर परिसर">
+    </div>
+    <div class="gallery-item" onclick="enlargeImage('vastukala/2.jpg')">
+      <img src="vastukala/2.jpg" alt="मंदिर परिसर">
+    </div>
+    <div class="gallery-item" onclick="enlargeImage('vastukala/3.jpg')">
+      <img src="vastukala/3.jpg" alt="मंदिर परिसर">
+    </div>
+    <div class="gallery-item" onclick="enlargeImage('vastukala/4.jpg')">
+      <img src="vastukala/4.jpg" alt="मंदिर परिसर">
+    </div>
+    <div class="gallery-item" onclick="enlargeImage('vastukala/5.jpg')">
+      <img src="vastukala/5.jpg" alt="मंदिर परिसर">
+    </div>
+    <div class="gallery-item" onclick="enlargeImage('vastukala/6.jpg')">
+      <img src="vastukala/6.jpg" alt="मंदिर परिसर">
+    </div>
+    <div class="gallery-item" onclick="enlargeImage('vastukala/7.jpg')">
+      <img src="vastukala/7.jpg" alt="मंदिर परिसर">
+    </div>
+    <div class="gallery-item" onclick="enlargeImage('vastukala/8.jpg')">
+      <img src="vastukala/8.jpg" alt="मंदिर परिसर">
+    </div>
+    <div class="gallery-item" onclick="enlargeImage('vastukala/9.jpg')">
+      <img src="vastukala/9.jpg" alt="मंदिर परिसर">
+    </div>
+    <div class="gallery-item" onclick="enlargeImage('vastukala/10.jpg')">
+      <img src="vastukala/10.jpg" alt="मंदिर परिसर">
+    </div>
+    <div class="gallery-item" onclick="enlargeImage('vastukala/11.jpg')">
+      <img src="vastukala/11.jpg" alt="मंदिर परिसर">
+    </div>
+    <div class="gallery-item" onclick="enlargeImage('vastukala/12.jpg')">
+      <img src="vastukala/12.jpg" alt="मंदिर परिसर">
+    </div>
+    <div class="gallery-item" onclick="enlargeImage('vastukala/13.jpg')">
+      <img src="vastukala/13.jpg" alt="मंदिर परिसर">
+    </div>
+    <div class="gallery-item" onclick="enlargeImage('vastukala/14.jpg')">
+      <img src="vastukala/14.jpg" alt="मंदिर परिसर">
+    </div>
+    <div class="gallery-item" onclick="enlargeImage('vastukala/15.jpg')">
+      <img src="vastukala/15.jpg" alt="मंदिर परिसर">
+    </div>
+    <div class="gallery-item" onclick="enlargeImage('vastukala/16.jpg')">
+      <img src="vastukala/16.jpg" alt="मंदिर परिसर">
+    </div>
+  </div>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <button class="close-btn" onclick="closeLightbox()">×</button>
+    <img id="lightbox-img" src="" alt="Enlarged Image">
+  </div>
+
+  <!-- Transparent overlay to deter screenshots -->
+  <div class="overlay"></div>
+  <div>
+    <a href="../photos.html" class="back-link" >
+      Click here to go Back
+    </a>
+  </div>
+
+  <footer>
+    © 2024 हनी वर्मा | सभी अधिकार सुरक्षित
+  </footer>
+
+  <script>
+    // Function to enlarge the image in a lightbox
+    function enlargeImage(src) {
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
+      lightboxImg.src = src;
+      lightbox.style.display = 'flex';
+    }
+
+    // Function to close the lightbox
+    function closeLightbox() {
+      const lightbox = document.getElementById('lightbox');
+      lightbox.style.display = 'none';
+    }
+
+    // Disable right-click context menu
+    document.addEventListener('contextmenu', (e) => {
+      e.preventDefault();
+      alert("Right-click is disabled on this website!");
+    });
+  </script>
+</body>
+</html>

@@ -12,6 +12,10 @@ playPauseButton.addEventListener("click", () => {
       playPauseButton.textContent = "Play Audio";
   }
 }); 
+
+// GoBackButton.addEventListener("Click",() => {
+
+// })
  
 (function() {
   "use strict";
