@@ -16,6 +16,18 @@ playPauseButton.addEventListener("click", () => {
 // GoBackButton.addEventListener("Click",() => {
 
 // })
+
+//prevent screenshot 
+
+document.addEventListener('visibilitychange', () => {
+  if (document.hidden) {
+      document.body.style.filter = 'blur(10px)';
+      alert('Content blurred to prevent screenshots!');
+  } else {
+      document.body.style.filter = 'none';
+  }
+});
+
  
 (function() {
   "use strict";
