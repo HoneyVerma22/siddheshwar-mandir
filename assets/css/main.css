@@ -638,6 +638,11 @@ footer {
   background-color: #ff7f00; /* Slightly darker orange on hover */
 }
 
+/* Disable text highlighting */
+::selection {
+  background: transparent; /* Prevent text highlighting */
+}
+
 @media (max-width: 575px) {
   .hero .stat-item {
     padding: 1.5rem;

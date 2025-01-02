@@ -55,9 +55,20 @@
       border-radius: 10px;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     }
+
+    /* Disable text highlighting */
+    ::selection {
+      background: transparent; /* Prevent text highlighting */
+}
   </style>
 </head>
 <body>
+  <script>   
+    document.addEventListener('contextmenu', (e) => {
+    e.preventDefault();
+    alert("Right-click is disabled on this website!");
+  });
+  </script>
   <div class="container">
     <h1>प्राचीन लाल ईंटों का सिद्धेश्वर महादेव मंदिर</h1>
     <div class="image-container">
@@ -86,4 +97,5 @@
     <a href="index.html" class="back-link">मुख्य पृष्ठ पर वापस जाएं</a>
   </div>
 </body>
+
 </html>

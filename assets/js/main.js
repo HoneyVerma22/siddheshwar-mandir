@@ -17,6 +17,11 @@ playPauseButton.addEventListener("click", () => {
 
 // })
 
+   
+  document.addEventListener('contextmenu', (e) => {
+  e.preventDefault();
+  alert("Right-click is disabled on this website!");
+});
 
  
 (function() {
