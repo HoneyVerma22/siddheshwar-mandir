@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>मंदिर के विभिन्न दृश्य</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+    header {
+      background-color: #8B0000;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+      gap: 20px;
+    }
+    .gallery-item {
+      width: 300px;
+      border: 2px solid #8B0000;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      cursor: pointer;
+    }
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .description {
+      padding: 10px;
+      background-color: #fff;
+    }
+    .back-link {
+      display: block;
+      margin-top: 20px;
+      text-align: center;
+      font-weight: bold;
+      color: #8B0000;
+      text-decoration: none;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+    }
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: #8B0000;
+      color: white;
+      margin-top: 20px;
+    }
+
+    /* Lightbox Styles */
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border: 5px solid white;
+      border-radius: 10px;
+    }
+    .lightbox .close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 30px;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>मंदिर के विभिन्न दृश्य</h1>
+  </header>
+  <div class="gallery">
+    <div class="gallery-item" onclick="openLightbox('angle view/1.jpeg')">
+      <img src="angle view/1.jpeg" alt="मंदिर का दृश्य">
+      <div class="description"> मंदिर की पश्चिमी दीवार में समतल अथवा तिरछे रूप में विभिन्न देवी देवतावों की आकृतियों को दर्शाया गया है।</div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox('angle view/2.jpeg')">
+      <img src="angle view/2.jpeg" alt="मंदिर का साइड व्यू">
+      <div class="description"> पश्चिम की दीवार के मध्य भद्रा में सूर्य, दोनों तरफ, एक सपाट पार्टिरथ और कर्ण के साथ तिरछे विभाजन हैं।</div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox('angle view/3.jpeg')">
+      <img src="angle view/3.jpeg" alt="मंदिर के शिखर का चित्र">
+      <div class="description">विमना की दक्षिण दीवार</div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox('angle view/4.jpeg')">
+      <img src="angle view/4.jpeg" alt="रात में मंदिर">
+      <div class="description">दक्षिण में, भद्रा चंद्रशला एक ग्रसामुखा द्वारा के ऊपर है, जिसके बाद एक बैठा हुआ शेर है।</div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox('angle view/5.jpeg')">
+      <img src="angle view/5.jpeg" alt="रात में मंदिर">
+      <div class="description">सूर्य पूर्वी भद्रा चंद्रशला में</div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox('angle view/6.jpeg')">
+        <img src="angle view/6.jpeg" alt="रात में मंदिर">
+        <div class="description">उत्तर भद्रा चंद्रशला में गज-लक्ष्मी</div>
+      </div>
+    <div class="gallery-item" onclick="openLightbox('angle view/7.jpeg')">
+        <img src="angle view/7.jpeg" alt="रात में मंदिर">
+        <div class="description">एक हाथी के ऊपर एक सवार के साथ एक व्यास पल्लवी पिलास्टर (एक आयताकार स्तंभ) का आधार बनाता है।</div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox('angle view/8.jpeg')">
+        <img src="angle view/8.jpeg" alt="रात में मंदिर">
+        <div class="description">एक पुरुष आकृति (कुबेर?) उत्तर-पूर्व कर्ण चंद्रशला में एक माला पकड़े हुए</div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox('angle view/9.jpeg')">
+        <img src="angle view/9.jpeg" alt="रात में मंदिर">
+        <div class="description">पूर्व-उत्तर कर्ण चंद्रशला में एक योग-पट्टा के साथ एक बैठा हुआ पुरुष आकृति</div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox('angle view/10.jpeg')">
+        <img src="angle view/10.jpeg" alt="रात में मंदिर">
+        <div class="description">दक्षिण-पूर्व कर्ण चंद्रशला में कार्तिक्य जी की आकृति</div>
+      </div>
+  </div>
+
+  <!-- Lightbox Container -->
+  <div class="lightbox" id="lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <img id="lightbox-img" src="">
+  </div>
+
+  <a href="../index.html" class="back-link">Back to home page</a>
+
+  <footer>
+    © 2024 हनी वर्मा | सभी अधिकार सुरक्षित
+  </footer>
+
+  <script>
+    function openLightbox(imageSrc) {
+      document.getElementById("lightbox").style.display = "flex";
+      document.getElementById("lightbox-img").src = imageSrc;
+    }
+
+    function closeLightbox() {
+      document.getElementById("lightbox").style.display = "none";
+    }
+  </script>
+</body>
+</html>
