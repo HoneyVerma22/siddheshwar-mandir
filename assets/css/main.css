@@ -28,19 +28,13 @@
 
 /* Font file  */
 
-@font-face {
-  font-family: 'Kikila';
-  src: url('assets/font/Kokila Regular.ttf') format('truetype'); /* Adjust path */
-  font-weight: normal;
-  font-style: normal;
-}
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
 .light-background {
   --background-color: #f28500;
   --surface-color: #ffffff;
-}
+};
 
 .dark-background {
   --background-color: #0d83fd;
@@ -48,7 +42,7 @@
   --heading-color: #ffffff;
   --surface-color: #ee8d17;
   --contrast-color: #ffffff;
-}
+};
 
 /* Smooth scroll */
 :root {
@@ -438,7 +432,7 @@ h6 {
   }
 
   .hero .hero-content h1 {
-    font-family:Kikila;
+    /* font-family: */
     font-size: 2.5rem;
   }
 
